@@ -1,31 +1,32 @@
-import { Pressable, StyleSheet, Text, View } from 'react-native';
+import { Pressable, StyleSheet, Text, View } from "react-native";
 
-const ModuleItem = ({module, onSelect}) => {
+const ModuleItem = ({ module, onSelect }) => {
   // Initialisations ---------------------
   // State -------------------------------
   // Handlers ----------------------------
+  const handleSelect = () => onSelect(module);
+
   // View --------------------------------
   return (
-    <Pressable onPress={() => onSelect(module)}>
-    <View style={styles.item}>
-      <Text style={styles.text}>
-        {module.ModuleCode} {module.ModuleName}
-      </Text>
-    </View>
+    <Pressable onPress={handleSelect}>
+      <View style={styles.item}>
+        <Text style={styles.text}>
+          {module.ModuleCode} {module.ModuleName}
+        </Text>
+      </View>
     </Pressable>
   );
 };
 
 const styles = StyleSheet.create({
-    item: {
-        paddingVertical: 15,
-        borderTopWidth: 1,
-        borderColor: 'lightgray',
-      },
-      text: {
-        fontSize: 16,
-      },
-
+  item: {
+    paddingVertical: 15,
+    borderTopWidth: 1,
+    borderColor: "lightgray",
+  },
+  text: {
+    fontSize: 16,
+  },
 });
 
 export default ModuleItem;
