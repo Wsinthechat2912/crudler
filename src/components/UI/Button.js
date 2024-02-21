@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     padding: 3,
     flex: 1,
-    flexDirection: 'row',
+    flexDirection: "row",
     gap: 5,
   },
   label: {
