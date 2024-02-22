@@ -3,34 +3,34 @@ import FullWidthImage from "react-native-fullwidth-image";
 import Icons from "../../UI/Icons.js";
 import { Button, ButtonTray } from "../../UI/Button.js";
 
-const ModuleView = ({ module, onDelete, onModify }) => {
+const UserView = ({ user, onDelete, onModify }) => {
   // Initialisations ---------------------
   // State -------------------------------
   // Handlers ----------------------------
-  const handleDelete = () => onDelete(module);
+  const handleDelete = () => onDelete(user);
 
   const requestDelete = () =>
     Alert.alert(
       "Delete Warning",
-      `Are you sure that you want to delete module ${module.ModuleCode} ${module.ModuleName}`,
+      `Are you sure that you want to delete user ${user.UserFirstname} ${user.UserLastname}`,
       [{ text: "Cancel" }, { text: "Delete", onPress: handleDelete }]
     );
   // View --------------------------------
   return (
     <View style={styles.container}>
       <FullWidthImage
-        source={{ uri: module.ModuleImageURL }}
+        source={{ uri: user.UserImageURL }}
         style={styles.image}
       />
 
       <View style={styles.infoTray}>
         <Text style={styles.boldText}>
-          {module.ModuleCode} {module.ModuleName}
+          {user.UserFirstname} {user.UserLastname}
         </Text>
-        <Text style={styles.text}>Level {module.ModuleLevel}</Text>
+        <Text style={styles.text}>Level {user.UserUsertypeName}</Text>
         <Text style={styles.text}>
-          {module.ModuleLeaderName}{" "}
-          <Text style={styles.dimText}>(Module Leader)</Text>
+          {user.UserFirstname} {user.UserLastname}{" "}
+          <Text style={styles.dimText}>(Student)</Text>
         </Text>
       </View>
       <ButtonTray>
@@ -69,4 +69,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ModuleView;
+export default UserView;

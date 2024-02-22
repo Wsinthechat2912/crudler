@@ -1,8 +1,8 @@
 import { StyleSheet } from "react-native";
-import Screen from "../layout/Screen";
-import ModuleForm from "../entity/modules/ModuleForm";
+import Screen from "../../layout/Screen";
+import UserForm from "../../entity/users/UserForm";
 
-const ModuleAddScreen = ({ navigation, route }) => {
+const UserAddScreen = ({ navigation, route }) => {
   // Initialisations ---------------------
   const { onAdd } = route.params;
 
@@ -14,11 +14,11 @@ const ModuleAddScreen = ({ navigation, route }) => {
 
   return (
     <Screen>
-      <ModuleForm onSubmit={onAdd} onCancel={handleCancel} />
+      <UserForm onSubmit={onAdd} onCancel={handleCancel} />
     </Screen>
   );
 };
 
 const styles = StyleSheet.create({});
 
-export default ModuleAddScreen;
+export default UserAddScreen;

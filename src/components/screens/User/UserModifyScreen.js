@@ -1,10 +1,10 @@
 import { StyleSheet, Text } from "react-native";
-import Screen from "../layout/Screen";
-import ModuleForm from "../entity/modules/ModuleForm.js";
+import Screen from "../../layout/Screen.js";
+import UserForm from "../../entity/users/UserForm.js";
 
-const ModuleModifyScreen = ({ navigation, route }) => {
+const UserModifyScreen = ({ navigation, route }) => {
   // Initialisations ---------------------
-  const { module, onModify } = route.params;
+  const { user, onModify } = route.params;
   // State -------------------------------
   // Handlers ----------------------------
   const handleCancel = navigation.goBack;
@@ -12,8 +12,8 @@ const ModuleModifyScreen = ({ navigation, route }) => {
 
   return (
     <Screen>
-      <ModuleForm
-        originalModule={module}
+      <UserForm
+        originalUser={user}
         onSubmit={onModify}
         onCancel={handleCancel}
       />
@@ -23,4 +23,4 @@ const ModuleModifyScreen = ({ navigation, route }) => {
 
 const styles = StyleSheet.create({});
 
-export default ModuleModifyScreen;
+export default UserModifyScreen;
