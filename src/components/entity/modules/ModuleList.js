@@ -1,16 +1,22 @@
-import { ScrollView, StyleSheet } from 'react-native';
-import ModuleItem from './ModuleItem.js';
+import { ScrollView, StyleSheet } from "react-native";
+import ModuleItem from "./ModuleItem.js";
 
-const ModuleList = ({modules, onSelect}) => {
+const ModuleList = ({ modules, onSelect }) => {
   // Initialisations ---------------------
   // State -------------------------------
   // Handlers ----------------------------
   // View --------------------------------
   return (
     <ScrollView style={styles.container}>
-      {modules.map((module)=>{
-        return <ModuleItem key ={module.ModuleCode} module={module} onSelect={onSelect} />;
-        })}
+      {modules.map((module) => {
+        return (
+          <ModuleItem
+            key={module.ModuleCode}
+            module={module}
+            onSelect={onSelect}
+          />
+        );
+      })}
     </ScrollView>
   );
 };
