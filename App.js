@@ -91,12 +91,12 @@ export default function App() {
         <Drawer.Screen
           name="Modules"
           component={ModuleStack}
-          options={{ drawerLabel: "Managing Modules" }}
+          options={{ drawerLabel: "Modules Crudler" }}
         />
         <Drawer.Screen
           name="Users"
           component={UserStack}
-          options={{ drawerLabel: "Managing Users" }}
+          options={{ drawerLabel: "Users Crudler" }}
         />
       </Drawer.Navigator>
     </NavigationContainer>
