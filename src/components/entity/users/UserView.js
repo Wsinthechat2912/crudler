@@ -27,7 +27,9 @@ const UserView = ({ user, onDelete, onModify }) => {
         <Text style={styles.boldText}>
           {user.UserFirstname} {user.UserLastname}
         </Text>
-        <Text style={styles.text}>Level {user.UserUsertypeName}</Text>
+        <Text style={styles.text}>Email: {user.UserEmail}</Text>
+        <Text style={styles.text}>Type: {user.UserUsertypeName}</Text>
+        <Text style={styles.text}>Year: {user.UserYear}</Text>
         <Text style={styles.text}>
           {user.UserFirstname} {user.UserLastname}{" "}
           <Text style={styles.dimText}>(Student)</Text>
